@@ -1,13 +1,28 @@
 // exportacion nombrada
 // export const pochoclo = ()=>{
 
+import CartWidget from "../common/CartWidget"
+
 // }
 
-export const productos =[]
+
 
 export const Navbar = ()=>{
     return(
-        <h1>Este es el Navbar</h1>
+        <nav>
+            <div>
+            <div>
+                <img src="" alt="logo" />
+            </div>
+            
+                <ul>
+                    <li>news</li>
+                    <li>las mas pedidas</li>
+                    <li>todas</li>
+                </ul>
+            <CartWidget />
+            </div>
+        </nav>
     )
 }
 
