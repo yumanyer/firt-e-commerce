@@ -7,7 +7,7 @@ export const productos =[]
 
 export const Navbar = ()=>{
     return(
-        <h1>Este es elñ Navbar</h1>
+        <h1>Este es el Navbar</h1>
     )
 }
 
