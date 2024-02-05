@@ -4,8 +4,8 @@ const CartWidget = () => {
   return (
     <div>                
     
-    <span>carrito</span>
-    <IoCartOutline />
+    <span> 10</span>
+    <IoCartOutline color="blueviolet"/>
     
     </div>
   )
