@@ -22,6 +22,7 @@ export const Navbar = ()=>{
             </div>
             
             <CartWidget />
+            
             </div>
         </nav>
     )
