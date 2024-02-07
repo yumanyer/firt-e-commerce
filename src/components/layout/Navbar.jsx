@@ -2,6 +2,7 @@
 // export const pochoclo = ()=>{
 
 import CartWidget from "../common/CartWidget"
+import { Conter } from "../common/Conter"
 
 // }
 
@@ -22,7 +23,7 @@ export const Navbar = ()=>{
             </div>
             
             <CartWidget />
-            
+            <Conter />
             </div>
         </nav>
     )
