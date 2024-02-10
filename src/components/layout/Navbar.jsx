@@ -1,8 +1,8 @@
 // exportacion nombrada
 // export const pochoclo = ()=>{
 
-import CartWidget from "../common/CartWidget"
-import { Conter } from "../common/Conter"
+// import CartWidget from "../common/CartWidget"
+// import  Conter  from "../common/Conter.jsx"
 
 // }
 

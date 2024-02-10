@@ -1,19 +1,18 @@
-// exportacion por defecto
-// import pochcolo from "./components/layout/Navbar"
+// App.jsx
+import React from "react";
+import ItemCountContainer from "./components/common/ItemCount/ItemCountContainer";
+// import Navbar from "./components/layout/Navbar";
+// import ItemListContainer from "./components/common/ItemCount/ItemCount";
 
-import {Navbar} from "./components/layout/Navbar"
-import {ItemListContainer} from "./components/pages/ItemListContainer"
-function App() {
+const App = () => {
   return (
-  <div>
-    
-  <Navbar />
-  <ItemListContainer greeting="¡Bienvenido a nuestra tienda de hamburguesas!"  />
-  
+    <div>
+      {/* <Navbar /> */}
+      {/* <ItemListContainer /> */}
+      <ItemCountContainer stock={3} />
+    </div>
+  );
+};
 
-  </div>
+export default App;
 
-)
-}
-
-export default App
