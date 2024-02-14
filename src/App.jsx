@@ -1,19 +1,15 @@
-// exportacion por defecto
-// import pochcolo from "./components/layout/Navbar"
+import { Navbar } from "./components/layout/Navbar";
+import { FetchingDataContainer } from "./components/pages/fetchingData/FetchingDataContainer";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
 
-import {Navbar} from "./components/layout/Navbar"
-import {ItemListContainer} from "./components/pages/ItemListContainer"
-function App() {
+const App = () => {
   return (
-  <div>
-    
-  <Navbar />
-  <ItemListContainer greeting="¡Bienvenido a nuestra tienda de hamburguesas!"  />
-  
+    <>
+      {/* <Navbar /> */}
+      <ItemListContainer />
+      <FetchingDataContainer />
+    </>
+  );
+};
 
-  </div>
-
-)
-}
-
-export default App
+export default App;
