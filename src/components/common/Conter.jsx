@@ -1,15 +1,20 @@
-// cada vez que nuestro componente cambia o se ve afectado
-// este se vuelve a leer y se ve siendo renderizado/actualizado
-
-import { useState } from "react"
-
+import React, { useState } from "react";
 
 export const Conter = () => {
+  // Utilizamos useState para mantener el estado del contador
+  const [count, setCount] = useState(0);
 
-return (
+  // Función para aumentar el contador
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  return (
     <div>
-        <button onClick>sumar</button>
+      {/* Mostramos el valor actual del contador */}
+      <p>Contador: {count}</p>
+      {/* Llamamos a la función increment cuando se hace clic en el botón */}
+      <button onClick={increment}>sumar</button>
     </div>
-)
-}
-
+  );
+};
