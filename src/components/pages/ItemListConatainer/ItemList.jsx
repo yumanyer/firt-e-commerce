@@ -1,13 +1,21 @@
-import React from "react";
+import { ProductCard } from "../../common/ProductCard";
 
-export const ItemList = ({ items }) => { // Pasar 'items' como una prop
+const ItemList = ({ items }) => {
   return (
     <div>
-      {items.map((item, ) => ( // Utilizar 'items' y agregar un 'key' a cada elemento
-        <h2></h2>
-    
-
-    ))}
+      {items.map(({id, img, title, description, price}) => {
+        return (
+          <ProductCard
+            key={id}
+            img={img}
+            title={title}
+            description={description}
+            price={price}
+          />
+        );
+      })}
     </div>
   );
 };
+
+export default ItemList;

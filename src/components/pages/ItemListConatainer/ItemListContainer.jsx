@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { ItemList } from "./ItemList";
+import  ItemList  from "./ItemList";
 import { productos } from "../../../productMock";
 
 export const ItemListContainer = () => {
-  const [items, setItems] = useState([]); // Corregir 'useStates' a 'useState'
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const tarea = new Promise((resolve, reject) => {
@@ -13,7 +13,7 @@ export const ItemListContainer = () => {
 
     tarea
       .then((res) => {
-        setItems(res); // Corregir el método 'set'
+        setItems(res);
       })
       .catch((error) => {
         console.log(error);
@@ -23,8 +23,6 @@ export const ItemListContainer = () => {
   console.log(items);
 
   return (
-    <>
-      <ItemList items={items} /> {/* Pasar los productos como prop al componente ItemList */}
-    </>
+    <ItemList items={items} />
   );
 };
