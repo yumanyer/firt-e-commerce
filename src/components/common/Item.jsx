@@ -7,7 +7,7 @@ export const Item = ({ id, nombre, img, description, precio }) => {
         <h5 className="card-title">{nombre}</h5>
         <img src={img} alt={nombre} className="img-fluid mb-3" />
         <p className="card-text">{description}</p>
-        <p>Precio: {precio}</p> {/* Mostrar el precio */}
+        <p style={{ color: 'white' }}>Precio: {precio}</p> {/* Aplica el color blanco al precio */}
         <Link to={`/item/${id}`} className="btn btn-primary">Detalles</Link>
       </div>
     </div>
@@ -15,4 +15,5 @@ export const Item = ({ id, nombre, img, description, precio }) => {
 };
 
 export default Item;
+
 

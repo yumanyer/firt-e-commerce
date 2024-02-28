@@ -21,7 +21,7 @@ export const ItemCount = ({ stock, initial = 1}) => {
         <button  onClick={increment}>
           +
         </button>
-        <strong>{count}</strong>
+        <strong style={{ color: 'white' }}>{count}</strong>
         <button  onClick={decrement}>
           -
         </button>
