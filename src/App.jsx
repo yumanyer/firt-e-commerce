@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import { Navbar } from "./components/layout/Navbar";
 import { ItemListContainer } from "./components/pages/ItemListContainer";
 import { Cart } from "./components/common/Cart";
@@ -17,6 +17,7 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
 

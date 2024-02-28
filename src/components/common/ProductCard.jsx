@@ -1,3 +1,4 @@
+
 import "./ProductCard.css";
 
 export const ProductCard = ({ img, title, description, price }) => {
@@ -10,3 +11,4 @@ export const ProductCard = ({ img, title, description, price }) => {
     </div>
   );
 };
+

@@ -3,11 +3,13 @@
 const CartWidget = () => {
   return (
 
+
     <>            
     
     <span> 10</span>
     <IoCartOutline color="white"/>
     </>   
+
   );
 };
 
