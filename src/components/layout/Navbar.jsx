@@ -1,6 +1,5 @@
-import React from "react";
 import CartWidget from "../common/CartWidget";
-import { Conter } from "../common/Conter"; // Importar Conter como una exportación nombrada
+import { Link } from "react-router-dom";
 
 export const pochoclo = () => {
   // Exportación nombrada
@@ -8,19 +7,25 @@ export const pochoclo = () => {
 
 export const Navbar = () => {
   return (
-    <nav>
+    <nav className="d-flex justify-content-around mt-2">
       <div>
         <ul>
-          <li>Home</li>
-          <li>hambrugesa nuevas</li>
-          <li>Las mas pedidas</li>
-          <li>Carta</li>
-        </ul> {/* Cierre de la etiqueta ul movido aquí */}
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/categoria/Nuevas">
+            <li>Hamburguesas Nuevas</li>
+          </Link>
+          <Link to="/categoria/Las mas pedidas">
+            <li>Las Más Pedidas</li>
+          </Link>
+        </ul>
         <div>
           <img src="" alt="" />
         </div>
-        <CartWidget />
-        <Conter /> {/* Uso de Conter como componente importado */}
+        <Link to="/cart">
+          <CartWidget />
+        </Link>
       </div>
     </nav>
   );
