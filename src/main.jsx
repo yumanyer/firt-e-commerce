@@ -1,18 +1,8 @@
-
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Router } from 'react-router-dom'; 
-import App from './App';
+import { createRoot } from 'react-dom/client'; // Importa createRoot desde "react-dom/client"
+import App from './App'; // Suponiendo que App es tu componente principal
 
 const root = createRoot(document.getElementById('root'));
-
-root.render(
-  
-    <Router>
-    <App />
-  </Router>
-  
-
-);
+root.render(<App />);
 
 
