@@ -1,0 +1,52 @@
+/* Estilo del navbar */
+.navbar {
+    background-color: #333; /* Cambia el color de fondo */
+    padding: 10px 0; /* Añade espacio alrededor del contenido */
+  }
+  
+  /* Estilo del contenedor interno */
+  .navbar-container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  /* Lista de elementos de navegación */
+  .navbar-list {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  /* Estilo de los elementos de la lista */
+  .navbar-item {
+    display: inline; 
+    margin-right: 20px; 
+  }
+  
+  /* Estilo del enlace */
+  .navbar-link {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight: bold; 
+  }
+  
+  /* Estilo del enlace al pasar el ratón por encima */
+  .navbar-link:hover {
+    color: #ffcc00; 
+  }
+  
+  /* Estilo del logo */
+  .navbar-image {
+    max-width: 100px; 
+  }
+  /* Estilo del carrito de compras */
+  .navbar-cart {
+    float: right; 
+    color:white;
+  }
+  

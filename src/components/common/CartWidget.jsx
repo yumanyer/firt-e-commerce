@@ -5,7 +5,7 @@ const CartWidget = () => {
     <div>                
     
     <span> 10</span>
-    <IoCartOutline color="blueviolet"/>
+    <IoCartOutline color="white"/>
     
     </div>
   )

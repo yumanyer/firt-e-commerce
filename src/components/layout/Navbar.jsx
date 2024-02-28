@@ -1,29 +1,26 @@
 import CartWidget from "../common/CartWidget";
 import { Link } from "react-router-dom";
-
-export const pochoclo = () => {
-  // Exportación nombrada
-};
+import "./Navbar.css"; // Importa el archivo CSS
 
 export const Navbar = () => {
   return (
-    <nav className="d-flex justify-content-around mt-2">
-      <div>
-        <ul>
-          <Link to="/">
-            <li>Home</li>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <ul className="navbar-list">
+          <Link to="/" className="navbar-link">
+            <li className="navbar-item">Home</li>
           </Link>
-          <Link to="/categoria/Nuevas">
-            <li>Hamburguesas Nuevas</li>
+          <Link to="/categoria/Nuevas" className="navbar-link">
+            <li className="navbar-item">Hamburguesas Nuevas</li>
           </Link>
-          <Link to="/categoria/Las mas pedidas">
-            <li>Las Más Pedidas</li>
+          <Link to="/categoria/Las mas pedidas" className="navbar-link">
+            <li className="navbar-item">Las Más Pedidas</li>
           </Link>
         </ul>
-        <div>
-          <img src="" alt="" />
+        <div className="navbar-logo">
+          <img src="" alt="" className="navbar-image" />
         </div>
-        <Link to="/cart">
+        <Link to="/cart" className="navbar-cart">
           <CartWidget />
         </Link>
       </div>

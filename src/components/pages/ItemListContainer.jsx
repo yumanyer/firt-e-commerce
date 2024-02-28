@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getProducts } from "../../productMock";
 import { ItemList } from "../common/ItemList";
 import { useParams } from "react-router-dom";
-
+import { FaSpinner } from "react-icons/fa6";
 export const ItemListContainer = () => {
   const { categoria } = useParams();
   const [productos, setProductos] = useState([]);
@@ -27,7 +27,7 @@ export const ItemListContainer = () => {
   return (
     <div>
       {isLoading ? (
-        <h2>Cargando productos...</h2>
+        <FaSpinner size={32} />
       ) : (
         <ItemList productos={productos} />
       )}

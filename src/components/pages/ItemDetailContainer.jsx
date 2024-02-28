@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ItemDetail } from "../common/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../productMock";
+import { FaSpinner } from "react-icons/fa6";
 
 export const ItemDetailContainer = () => {
   //tenemos que conseguir esa info del parametro de nuestra app
@@ -18,6 +19,12 @@ export const ItemDetailContainer = () => {
     });
   }, []);
   return (
-    <>{isLoading ? <h2>Cargando producto...</h2> : <ItemDetail {...item} />}</>
+    <>
+      {isLoading ? (
+        <FaSpinner size={32} /> 
+      ) : (
+        <ItemDetail {...item} />
+      )}
+    </>
   );
 };

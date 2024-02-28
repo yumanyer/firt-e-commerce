@@ -1,13 +1,12 @@
-export const ProductCard = ( {img, title, description, price} ) => {
+import "./ProductCard.css";
 
-    // const  { titulo, desc, precio } = prop
-
+export const ProductCard = ({ img, title, description, price }) => {
   return (
-    <div style={{border: "2px solid black"}}>
+    <div className="product-card" style={{ border: "2px solid black" }}>
       <img src={img} alt="" />
-        <h1>{title}</h1>
-        <h3>{description}</h3>
-        <h3>{price}</h3>
+      <h1 className="product-title">{title}</h1>
+      <h3 className="product-description">{description}</h3>
+      <h3 className="product-price">{price}</h3>
     </div>
-  )
-}
+  );
+};

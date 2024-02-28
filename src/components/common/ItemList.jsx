@@ -4,7 +4,7 @@ import { Item } from "./Item"; // Importar el componente Item
 export const ItemList = ({ productos }) => {
   return (
     <>
-      <div className="d-flex flex-wrap">
+      <div>
         {productos.map((producto) => (
           <Item key={producto.id} {...producto} />
         ))}
