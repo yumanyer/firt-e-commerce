@@ -6,7 +6,7 @@
   border: 1px solid violet; /* Cambia el color del borde a violeta */
   margin: 10px; /* Espacio entre las tarjetas */
   padding: 20px; /* Espacio dentro de cada tarjeta */
-  width: calc(50% - 10px); /* Reducir el ancho en un 50% */
+  width: 300px;
   background-image: url(https://i.gifer.com/4pwn.gif);
   background-size: cover;
 }

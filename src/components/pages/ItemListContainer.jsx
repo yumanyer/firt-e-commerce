@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../../productMock";
 import { ItemList } from "../common/ItemList";
 import { useParams } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa6";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = () => {
   const { categoria } = useParams();
@@ -10,23 +11,33 @@ export const ItemListContainer = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getProducts()
-      .then((resp) => {
-        // Filtrar los productos por categoría si se proporciona una categoría en los parámetros de la URL
-        if (categoria) {
-          const productosFiltrados = resp.filter(
-            (producto) => producto.categoria === categoria
-          );
-          setProductos(productosFiltrados);
-        } else {
-          // Si no se proporciona una categoría, mostrar todos los productos
-          setProductos(resp);
-        }
-        setIsLoading(false);
-      })
-      .catch((error) =>
-        console.error("Error al obtener los productos:", error)
+    let productosCollection = collection(db, "productos");
+
+    let consulta;
+
+    if (categoria) {
+      let productosFiltrados = query(
+        productosCollection,
+        where("categoria", "==", categoria)
       );
+      consulta = productosFiltrados;
+    } else {
+      consulta = productosCollection;
+    }
+
+    // Verifico si categoria tiene un valor
+    getDocs(consulta)
+      .then((resp) => {
+        let arrayLegible = resp.docs.map((elemento) => {
+          return { ...elemento.data(), id: elemento.id };
+        });
+        setProductos(arrayLegible);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+
+    setIsLoading(false); // Establece isLoading como falso si categoria es undefined
   }, [categoria]);
 
   return (

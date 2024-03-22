@@ -1,13 +1,13 @@
-
 import React from "react";
 
 import CartWidget from "../common/CartWidget";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import "./Navbar.css"; // Importa el archivo CSS
 
 export const Navbar = () => {
   return (
-    <nav className="navbar">
+  <>
+    <div className="navbar">
       <div className="navbar-container">
         <ul className="navbar-list">
           <Link to="/" className="navbar-link">
@@ -21,12 +21,14 @@ export const Navbar = () => {
           </Link>
         </ul>
         <div className="navbar-logo">
-          <img src="" alt="" className="navbar-image" />
+          <img src="https://res.cloudinary.com/doackpmhu/image/upload/v1710820130/Logoo-removebg-preview_q4kzcu.png" alt="" className="navbar-image" />
         </div>
         <Link to="/cart" className="navbar-cart">
           <CartWidget />
         </Link>
       </div>
-    </nav>
-  );
-};
+    </div>
+      
+      </>
+      );
+    };

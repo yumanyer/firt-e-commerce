@@ -1,46 +1,29 @@
-
-// import { Navbar } from "./components/layout/Navbar";
-// import { ItemListContainer } from "./components/pages/ItemListContainer";
-// import { Cart } from "./components/common/Cart"; 
-// import { ItemDetailContainer } from "./components/pages/ItemDetailContainer";
-
-// function App() {
-//   return (
-//     <Router>
-//       <Navbar />
-//       <Routes>
-//         <Route path="/" element={<ItemListContainer/>} />
-//         <Route path="/categoria/:categoria" element={<ItemListContainer />} />
-//         <Route path="/cart" element={<Cart />} />
-//         <Route path="/item/:id" element={<ItemDetailContainer/>} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-
-// export default App;
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Importa BrowserRouter y otras utilidades de react-router-dom
-import { Navbar } from './components/layout/Navbar';
-import { ItemListContainer } from './components/pages/ItemListContainer';
-import { Cart } from './components/common/Cart';
-import { ItemDetailContainer } from './components/pages/ItemDetailContainer';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ItemListContainer } from "./components/pages/ItemListContainer";
+import { ItemDetailContainer } from "./components/pages/ItemDetailContainer";
+import Layout from "./components/layout/Layout";
+import CheckoutContainer from "./components/pages/checkout/CheckoutContainer";
+import { Cart } from "./components/pages/cart/Cart";
+import CartContextProvider from "./context/CartContext"; // Cambia la importación aquí
 
 function App() {
   return (
-    <Router> {/* Usa el componente Router para envolver tus rutas */}
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />} />
-        <Route path="/categoria/:categoria" element={<ItemListContainer />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-      </Routes>
+    <Router>
+      <CartContextProvider> {/* Utiliza el componente importado */}
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/categoria/:categoria" element={<ItemListContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckoutContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+            <Route path="*" element={<h1>404 not found</h1>} />
+          </Route>
+        </Routes>
+      </CartContextProvider>
     </Router>
   );
 }
 
 export default App;
-
-
