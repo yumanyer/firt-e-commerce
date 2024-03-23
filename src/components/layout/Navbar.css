@@ -1,49 +1,42 @@
-/* Estilo del navbar */
 .navbar {
-  background-color: #333; /* Cambia el color de fondo */
+  background-color: #333; /* Color de fondo de la barra de navegación */
+  color: white; /* Color del texto en la barra de navegación */
+  padding: 10px 0; /* Espaciado interno */
 }
 
-/* Estilo del contenedor interno */
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 0 20px; /* Añade un poco de espacio a los lados */
 }
 
-/* Lista de elementos de navegación */
 .navbar-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none; /* Elimina los estilos de la lista */
+  display: flex;
+  gap: 20px; /* Espacio entre elementos de la lista */
 }
 
-/* Estilo de los elementos de la lista */
 .navbar-item {
-  display: inline;
-  margin-right: 20px;
+  font-size: 18px; /* Tamaño de fuente de los elementos de la lista */
 }
 
-/* Estilo del enlace */
 .navbar-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: white; /* Color del texto en los enlaces */
 }
 
-/* Estilo del enlace al pasar el ratón por encima */
-.navbar-link:hover {
-  color: #ffcc00;
+.navbar-logo {
+  background-color: ;
 }
 
-/* Estilo del logo */
-.navbar-image {
-  max-width: 100px;
-}
-/* Estilo del carrito de compras */
 .navbar-cart {
-  float: right;
-  color: white;
+  /* Estilos para el carrito */
+}
+
+.navbar-image {
+  width: 100px; /* Ancho de la imagen del logo */
+  height: auto; /* Altura automática para mantener la proporción */
 }

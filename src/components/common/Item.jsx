@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import "./item.css"
 
 export const Item = ({ id, nombre, img, description, precio }) => {
   return (
+    <div className="card-container">
     <div className="card m-2">
       <div className="card-body">
         <h5 className="card-title">{nombre}</h5>
@@ -10,6 +12,7 @@ export const Item = ({ id, nombre, img, description, precio }) => {
         <p style={{ color: 'white' }}>Precio: {precio}</p> {/* Aplica el color blanco al precio */}
         <Link to={`/item/${id}`} className="btn btn-primary">Detalles</Link>
       </div>
+    </div>
     </div>
   );
 };

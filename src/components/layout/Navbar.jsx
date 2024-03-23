@@ -9,6 +9,9 @@ export const Navbar = () => {
   <>
     <div className="navbar">
       <div className="navbar-container">
+        <div className="navbar-logo">
+          <img src="https://res.cloudinary.com/doackpmhu/image/upload/v1710820130/Logoo-removebg-preview_q4kzcu.png" alt="" className="navbar-image" />
+        </div>
         <ul className="navbar-list">
           <Link to="/" className="navbar-link">
             <li className="navbar-item">Home</li>
@@ -20,9 +23,6 @@ export const Navbar = () => {
             <li className="navbar-item">Las Más Pedidas</li>
           </Link>
         </ul>
-        <div className="navbar-logo">
-          <img src="https://res.cloudinary.com/doackpmhu/image/upload/v1710820130/Logoo-removebg-preview_q4kzcu.png" alt="" className="navbar-image" />
-        </div>
         <Link to="/cart" className="navbar-cart">
           <CartWidget />
         </Link>

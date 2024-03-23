@@ -1,12 +1,13 @@
-.card-body {
+.card {
   display: flex;
   flex-direction: column; /* Alinea el contenido en columnas */
   justify-content: center; /* Centra verticalmente el contenido */
   align-items: center; /* Centra horizontalmente el contenido */
-  border: 1px solid violet; /* Cambia el color del borde a violeta */
+  border: 5px solid violet; /* Cambia el color del borde a violeta */
   margin: 10px; /* Espacio entre las tarjetas */
   padding: 20px; /* Espacio dentro de cada tarjeta */
   width: 300px;
+  height: 450px;
   background-image: url(https://i.gifer.com/4pwn.gif);
   background-size: cover;
 }
@@ -19,5 +20,6 @@
   font-size: 25px;
   color: #fafafa;
 }
+
 
 /* Agrega más estilos según sea necesario */
