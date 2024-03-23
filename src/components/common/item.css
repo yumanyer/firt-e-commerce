@@ -1,6 +1,0 @@
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas del mismo ancho */
-    justify-content: center; /* Centra horizontalmente las tarjetas */
-    gap: 20px; /* Espacio entre las tarjetas */
-  }

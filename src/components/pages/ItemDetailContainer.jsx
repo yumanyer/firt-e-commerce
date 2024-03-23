@@ -46,14 +46,12 @@ export const ItemDetailContainer = () => {
     // navigate("/Cart");
   };
   return (
-    <>
-      (
-      {isLoading ? 
+    <div className="card-container">
+      {isLoading ? (
         <FaSpinner size={32} />
-        : (
-        <ItemDetail {...item} onAdd={onAdd} valorInicial= {valorInicial}/>
+      ) : (
+        <ItemDetail {...item} onAdd={onAdd} valorInicial={valorInicial} />
       )}
-      )
-    </>
+    </div>
   );
 };
