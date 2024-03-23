@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "./Navbar";
 import { Outlet } from "react-router-dom";
-import Footer from "./footer/Footer.JSX";
+import Footer from "./Footer/Footer";
 
 const Layout = () => {
   return ( 
@@ -10,7 +10,7 @@ const Layout = () => {
         <Outlet/>
         <Footer/>
     </>
-    );
+  );
 };
 
 export default Layout;

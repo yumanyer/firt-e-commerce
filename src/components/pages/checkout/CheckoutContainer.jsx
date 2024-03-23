@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import Checkout from "./Checkout";
 import { CartContext } from "../../../context/CartContext";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection,updateDoc,doc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 
 
 const CheckoutContainer = () => {
   // creamos un estado para capturar informacion del usario
-  const [userInfo, setUserInfo] = useState({
+  const [userInfo, setUserInfo, ] = useState({
     name: "",
     phone: "",
     email: "",
@@ -16,7 +16,7 @@ const CheckoutContainer = () => {
   // Aquí, setOrderId debería ser una función para actualizar el orderId, no una variable constante
   const [orderId, setOrderId] = useState(null);
 
-  const { cart, precioTotal } = useContext(CartContext);
+  const { cart, precioTotal, limpiarCarrito } = useContext(CartContext);
   let totalPrice = precioTotal();
   //   la funcion se dispara cuando envio el form (LA VALIDACION DE DATOS TIENE QUE SER EN EL ENVIO DE FORM)
   const envioDeFormulario = (event) => {
@@ -34,7 +34,17 @@ const CheckoutContainer = () => {
     };
 
     let ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order).then((resp) => setOrderId(resp.id)); // Corregido aquí
+    addDoc(ordersCollection, order).then((resp) => setOrderId(resp.id)); 
+    
+          cart.forEach((productos)=>{
+
+            //doc = base de tatos, documento/tabla , en este caso id
+
+            let refDoc= doc(db,"productos",productos.id)
+            //como se cuanto tiene le resto lo que se compra 
+            updateDoc(refDoc,{stock:productos.stock - productos.quantity})
+          })
+          limpiarCarrito()
   };
 
   const capturarData = (event) => {
@@ -52,3 +62,8 @@ const CheckoutContainer = () => {
   );
 };
 export default CheckoutContainer;
+
+
+
+//PUT: Reemplaza completamente
+//PATCH: Modifica parcialmente
